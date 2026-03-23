@@ -114,6 +114,12 @@ ol {
   gap: 1.5px;
 }
 
+/* Когда наводим на чекбокс — текст подчеркивается (если только наводим на чекбокс(без поля ввода)) */
+.search-form__label:has(input[type="checkbox"]):hover {
+  text-decoration: underline;
+}
+
+
 /* Стили для поля ввода */
 .search-form__textfield {
   border-top: 1px solid #FFFFFF;
@@ -150,6 +156,7 @@ ol {
 
 .search-form__checkbox {}
 
+/* Форма чек-бокса */
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
@@ -157,11 +164,12 @@ ol {
   padding: 1px;
 }
 
-/* Rогда span:checked = input:after {opacity: 1} */
+/* Когда span:checked = input:after {opacity: 1} */
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after  {
   opacity: 1;
 }
 
+/* Заготовка чек-бокса */
 .search-form__pseudo-checkbox::after {
   content: "";
   display: block;
@@ -170,7 +178,6 @@ ol {
   height: 100%;
   opacity: 0;
 }
-
 
 .button {}
 
