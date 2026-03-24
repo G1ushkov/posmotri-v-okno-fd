@@ -53,6 +53,7 @@ ol {
   background-color: #D9D9D9;
 }
 
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -120,6 +121,8 @@ ol {
 }
 
 
+
+
 /* Стили для поля ввода */
 .search-form__textfield {
   border-top: 1px solid #FFFFFF;
@@ -141,10 +144,8 @@ ol {
 }
 
 /* Граница у лейбла при :focus-visible у поля ввода. Я не понимаю — почему у меня до сих пор выделяется только поле ввода...*/
-.search-form__label:has(.search-form__textfield:focus-visible) {
-  border: 1px solid #FFFFFF;
-  padding: 4px;
-  border-radius: 4px;
+.search-form__label:has(input:focus-visible) {
+  outline: 1px solid #FFFFFF;
 }
 
 /* Чек-боксы */
