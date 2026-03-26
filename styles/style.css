@@ -72,7 +72,7 @@ ol {
   gap: 30px;
 }
 
-.result {}
+/* .result {} Не использовал */
 
 .result__video-container {
   position: relative;
@@ -108,9 +108,7 @@ ol {
   font-size: 18px;
 }
 
-.search-form__label-text {
-
-}
+/* .search-form__label-text {} Не использовал */
 
 /* Стили для лейбла-инпута (общие) */
 .search-form__label {
@@ -164,7 +162,7 @@ ol {
   gap: 15px;
 }
 
-.search-form__checkbox {}
+/* .search-form__checkbox {} Не использовал*/
 
 /* Форма чек-бокса */
 .search-form__pseudo-checkbox {
@@ -175,7 +173,7 @@ ol {
 }
 
 /* Когда span:checked = input:after {opacity: 1} */
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after  {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1;
 }
 
@@ -252,7 +250,7 @@ ol {
   font-weight: 700;
   font-size: 75px;
   text-transform: uppercase;
-  line-height: 0.94;
+  line-height: 1;
 }
 
 .content__accent {
@@ -344,7 +342,6 @@ ol {
 }
 
 .preloader {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
