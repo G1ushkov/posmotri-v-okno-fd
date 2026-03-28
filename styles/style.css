@@ -233,7 +233,7 @@ ol {
 
 /* Кнопка — показать больше*/
 .more-button {
-  width: 100%;
+  width: 99%; /* Указал размер опираясь на пиксель-перфект */
   height: 34px;
   flex-shrink: 0; /* Замечательное свойство которое запрещает элементу уменьшаться в размерах */
 }
@@ -241,13 +241,15 @@ ol {
 .content__details {
   width: 100%;
   height: 100%;
-  gap: 30px;
+  gap: 26px;
   display: flex;
   flex-direction: column;
 }
 
 /* Доработать в пиксель перфект */
 .title {
+  display: inline-block;
+  transform: translate(-1px, 7px); /* по-другому — не знаю как... */
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -269,7 +271,7 @@ ol {
 
 /* Селектор карточки на которую кликает пользователь */
 .content__card-link_current {
-  background-color: transparent; /* пока поставлю прозрачный */
+  background-color: #545050; /* Поменял согласно макету */
 }
 
 /* Подчеркивание карточки при наведении */
@@ -300,6 +302,9 @@ ol {
   font-size: 30px;
   text-transform: uppercase;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 196px;
 }
 
 /* Изменение текста-описания ссылки-видео */
@@ -307,8 +312,9 @@ ol {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1;
+  line-height: 0.94;
   -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 
 .content__list-container {
@@ -316,8 +322,10 @@ ol {
   position: relative;
   flex-direction: column;
   max-height: 298px;
-  overflow-y: scroll;
+  min-height: 298px;
+  overflow-y: auto;
   gap: 30px;
+  flex-shrink: 0;
 }
 
 .content__list {
